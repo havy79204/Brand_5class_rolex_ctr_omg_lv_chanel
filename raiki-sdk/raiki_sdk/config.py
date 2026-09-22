@@ -1,0 +1,1 @@
+FOLDER_CACHE_MODEL_HF = "__modelcache__/"

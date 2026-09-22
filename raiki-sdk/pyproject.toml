@@ -1,0 +1,70 @@
+[project]
+name = "raiki-sdk"
+version = "0.1.5"
+description = "Raiki SDK - Base interfaces and utilities for classification and counterfeit detection systems"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+authors = [
+    { name = "Hà Vy Võ thị", email = "vothihavy792004@gmail.com" }
+]
+
+keywords = [
+    "counterfeit",
+    "detection",
+    "yolo",
+    "computer-vision",
+    "authentication",
+    "classify"
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "huggingface-hub==0.35.3",
+    "joblib>=1.5.2",
+    "numpy>=2.2.6",
+    "pandas>=2.3.3",
+    "pillow>=11.3.0",
+    "pydantic>=2.12.0",
+    "pyiqa>=0.1.14.1",
+    "rfdetr==1.1.0",
+    "supervision>=0.27.0",
+    "timm==1.0.20",
+    "tresnet-utils",
+    "ultralytics>=8.3.208",
+    "xgboost>=3.1.1",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/vothihavy792004/raiki-sdk"
+Repository = "https://gitlab.com/vothihavy792004/raiki-sdk.git"
+Issues = "https://gitlab.com/vothihavy792004/raiki-sdk/-/issues"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["raiki_sdk*"]
+exclude = ["tests*", "examples*"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"*" = ["*.md"]
+
+[tool.uv.sources]
+tresnet-utils = { git = "https://gitlab.com/vothihavy792004/tresnet-utils.git" }

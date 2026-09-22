@@ -1,0 +1,11 @@
+.venv
+models/
+__pycache__/
+img_test/
+cropped_image.jpg
+logs/
+.DS_Store
+.env
+
+*.deb
+__modelcache__
